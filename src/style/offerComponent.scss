@@ -1,0 +1,45 @@
+.offerContainer{
+    background-color: rgb(230, 230, 230);
+    z-index: 1;
+    justify-content: center;
+    position: relative;
+    .offerHeading{
+        font-weight: 600;
+        height: 10vh;
+    }
+    .items{
+        background-color: white !important;
+        transition: all 0.5s;
+        &:hover{
+            transform: translateY(-2px);
+            box-shadow: 10px 5px 10px 5px lightgray;
+            .showmore{
+                transform: translateY(-2px);
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .showmore{
+        position:relative;
+        width: fit-content;
+        transition: all 0.5s;
+        &::after{
+            width: 0%;
+            height: 1px;
+            background-color: gray;
+            bottom: 0;
+            left: 0;
+            content: "";
+            position: absolute;
+            transition: all 0.5s;
+        }
+        &:hover{
+            transform: translateY(-2px);
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+}

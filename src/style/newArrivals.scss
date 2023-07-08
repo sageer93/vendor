@@ -1,0 +1,44 @@
+.newArrivalsContainer{
+    .newArrivalsHeading{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        align-items: center;
+        .moreNewArrivals{
+            position: relative;
+            font-size: 19px;
+            cursor: pointer;
+            &::after{
+                position: absolute;
+                width: 40%;
+                content: '';
+                background-color: red;
+                height: 1.5px;
+                left: 0;
+                bottom: 0;
+                transition: all 0.5s;
+            }
+            &:hover{
+                &::after{
+                    width:100%;
+                }
+            }
+        }
+    }
+    .bannerSliderContainer{
+        background-color: rgb(230, 230, 230);
+    }
+    .cardsliderContainer{
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 300px;
+        .card{
+            width: 220px;
+            height: 300px;
+        }
+    }
+}

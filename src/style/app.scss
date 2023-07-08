@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+@import '../style/footer.scss';
+@import '../style/offerComponent.scss';
+@import '../style/newArrivals.scss';
+
+
+.bannersliderShadow{
+    height: 20vh;
+    background: rgb(1,1,1);
+    background: linear-gradient(8deg, rgba(1,1,1,0.5214460784313726) 1%, rgba(230,230,230,0.5) 1%, rgba(25,118,210,1) 97%);;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.bannerSliderContainer{
+    position: relative;
+    &:hover{
+        .swiper-button-prev,.swiper-button-next{
+            opacity: 1;
+        }
+    }
+}
+
+
+.swiper-button-prev,.swiper-button-next{
+    opacity: 0;
+    transition: all 0.5s;
+    color:white!important;
+    background-color: transparent;
+}
+
+
